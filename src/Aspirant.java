@@ -13,6 +13,4 @@ public class Aspirant extends Student{
         else
             return 180;
     }
-
-
 }

@@ -16,7 +16,5 @@ public class Main {
         for (Student student : array) {
             System.out.println(student.firstName + " " + student.lastName +": " + student.getScholarship());
         }
-
-
     }
 }
