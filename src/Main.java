@@ -1,20 +1,21 @@
+import details.Engine;
+import professions.Driver;
+import vehicles.Car;
+
 import java.time.LocalDate;
 
 public class Main {
 
     public static void main(String[] args) {
-        Student student1 = new Student("Василий", "Петров", "юридический", 4.5);
-        Student student2 = new Student("Федр", "Иванов", "медицинский", 5);
-        Student student3 = new Student("Петр", "Смирнов", "юридический", 3.3);
+        Driver driver1 = new Driver("John", 20, 40);
+        Engine engine1 = new Engine(300, "VW");
+        Car car1 = new Car ("Toyota", "Camry", 1200, driver1, engine1);
 
-        Aspirant aspirant1 = new Aspirant("Инокентий", "Караваев", "инженер", 5, "Желуди");
-        Aspirant aspirant2 = new Aspirant("Адександр", "Попов", "биологический", 4.3, "Желуди");
-        Aspirant aspirant3 = new Aspirant("Дмитрий", "Груздь", "бухгалтер", 2.1, "Желуди");
+        car1.start();
+        car1.stop();
+        car1.turnRight();
+        car1.turnLeft();
 
-        Student[] array = {student1, student2, student3, aspirant1, aspirant2, aspirant3};
-
-        for (Student student : array) {
-            System.out.println(student.firstName + " " + student.lastName +": " + student.getScholarship());
-        }
+        Car.printInfo(car1);
     }
 }
